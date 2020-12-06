@@ -1,0 +1,13 @@
+<html>
+<head><title>Home Page</title></head>
+<body>
+<img class="info" th:attr="src=@{${qrDataImage}}" />
+
+<form action="#" th:action="@{/pay}" method="post">
+   		<input type="submit" value="Pay">   
+   		<input type="hidden" name="qrData" th:value="${qrData}" />
+	</form>	
+	
+</body>
+
+</html>
