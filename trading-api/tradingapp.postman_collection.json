@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "c002ea42-7236-4909-9b2e-d4ce34cb320a",
+		"name": "tradingapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"symbol\":\"btc\",\r\n    \"amount\": 0.005\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tradingapp/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tradingapp",
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"symbol\":\"btc\",\r\n    \"amount\": 0.005\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tradingapp/sell",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tradingapp",
+						"sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tradingapp/history?from=16.04.2021&to=18.04.2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tradingapp",
+						"history"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "16.04.2021"
+						},
+						{
+							"key": "to",
+							"value": "18.04.2021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "balances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tradingapp/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tradingapp",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
