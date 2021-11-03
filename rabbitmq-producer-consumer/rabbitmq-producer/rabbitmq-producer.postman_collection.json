@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "23eb3260-debd-4fbf-b297-9345998e5589",
+		"name": "rabbitmq-producer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "send message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messageText\":\"test\",\r\n    \"messageLength\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/producer/v1/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"v1",
+						"message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
